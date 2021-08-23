@@ -1,0 +1,85 @@
+\documentclass{beamer}
+\usepackage{listings}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetheme{Boadilla}
+
+\title{Assignment 2}
+\author{Panisha Gundelli}
+\institute{NIPER Hyderabad}
+\date{\today}
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+\section{Question}
+\begin{frame}
+\frametitle{Question}
+Find a unit vector in the direction of the line passing through
+\newline
+$\vec {A}=\begin{pmatrix}-2\\4\\-5\end{pmatrix}$ and
+$\vec {B}=\begin{pmatrix}1\\2\\3\end{pmatrix}$
+\end{frame}
+\section{Solution}
+\begin{frame}{Solution}
+Given:-
+$\vec {A}=\begin{pmatrix}-2\\4\\-5\end{pmatrix}$ and
+$\vec {B}=\begin{pmatrix}1\\2\\3\end{pmatrix}$
+\begin{align}
+    \vec{AB}=\vec{B}-\vec{A}
+\end{align}
+\begin{align}
+    =\begin{pmatrix}1\\2\\3\end{pmatrix} - \begin{pmatrix}-2\\4\\-5\end{pmatrix}
+\end{align}
+\begin{align}
+     =\begin{pmatrix}3\\-2\\8\end{pmatrix}
+\end{align}
+\end{frame}
+\begin{frame}
+\newline 
+Magnitude of vector $\vec{A}\vec{B}$\\
+\begin{align}
+{\norm{\vec{A}\vec{B}} =\sqrt{\left(3\right)^2 + \left(-2\right)^2 + \left(8\right)^2}}
+\end{align}
+\begin{align}
+    =\sqrt{9+4+64}=\sqrt{77}
+    \end{align}
+ \end{frame}
+\begin{frame}
+The unit vector is calculated as
+\begin{align}
+\frac{\vec{AB}}{\norm{\vec{AB}}}=\frac{\begin{pmatrix}3\\-2\\8\end{pmatrix}}{\norm{\begin{pmatrix}3\\-2\\8\end{pmatrix}}}
+\end{align}
+\begin{align}
+    =\frac{1}{\sqrt{77}}\begin{pmatrix}3\\-2\\8\end{pmatrix}
+\end{align}
+    
+ \end{frame}
+ \section{Codes}
+\begin{frame}{Codes}
+Python code
+\href{https://github.com/Panisha707/ASSIGNMENT02/blob/main/untitled18.py}{\beamergotobutton{Link}}
+\newline
+The latex- tikz code 
+\href{https://github.com/Panisha707/ASSIGNMENT02/blob/main/main.tex}{\beamergotobutton{Link}}
+\end{frame}
+
+\end{document}
